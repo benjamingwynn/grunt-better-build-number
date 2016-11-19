@@ -1,12 +1,12 @@
 (function () {
 	/*
-	*	grunt-build-number
-	*	https://github.com/creynders/grunt-build-number
-	*
-	*	Copyright (c) 2014 Camille Reynders
-	*	Copyright (c) 2016 Benjamin Gwynn (http://xenxier.com)
-	*	Licensed under the MIT license.
-	*/
+	 *	grunt-better-build-number
+	 *	https://github.com/benjamingwynn/grunt-better-build-number
+	 *
+	 *	Copyright (c) 2014 Camille Reynders
+	 *	Copyright (c) 2016 Benjamin Gwynn (http://xenxier.com)
+	 *	Licensed under the MIT license.
+	 */
 
 	'use strict';
 	/*jslint node:true*/
