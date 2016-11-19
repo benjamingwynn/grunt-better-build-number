@@ -12,7 +12,8 @@
 	/*jslint node:true*/
 
 	var findup = require('findup-sync'),
-		S = require('string');
+		S = require('string'),
+		dotty = require('dotty');
 
 	module.exports = function (grunt) {
 		grunt.registerMultiTask('buildnumber', 'Grunt plugin for maintaining a build number in package.json', function () {
@@ -20,7 +21,8 @@
 				options = this.options({ // Default options if none provided
 					field: 'build',
 					dontChangeIndentation: true,
-					forceTabIndentation: false
+					forceTabIndentation: false,
+					forceDotty: true
 				});
 
 			if (!files.length) {
@@ -44,7 +46,9 @@
 					stringified,
 					lines,
 					spaceIndex,
-					space = '';
+					space = '',
+					nestedField = new S(options.field).contains('.') || options.forceDotty,
+					buildKey;
 
 				file.src.forEach(function (filename) {
 					filepath = findup(filename);
@@ -87,15 +91,28 @@
 					}
 
 					json = JSON.parse(contents);
-					buildNum = json[options.field];
 
-					if (buildNum !== undefined) {
-						buildNum = parseInt(buildNum, 10) + 1;
+					if (nestedField) {
+						grunt.verbose.writeln("Addressing a nested field");
+						buildNum = dotty.get(json, options.field);
 					} else {
-						buildNum = 1;
+						grunt.verbose.writeln("Addressing a non-nested field");
+						buildNum = json[options.field];
 					}
 
-					json[options.field] = buildNum.toString();
+					if (buildNum === undefined) {
+						grunt.verbose.writeln("No buildnumber found, creating a new one");
+						buildNum = 1;
+					} else {
+						buildNum = parseInt(buildNum, 10) + 1;
+					}
+
+					if (nestedField) {
+						dotty.put(json, options.field, buildNum.toString());
+					} else {
+						json[options.field] = buildNum.toString();
+					}
+
 					stringified = JSON.stringify(json, null, spaceCount);
 
 					if (useTabsInsteadOfSpaces || options.forceTabIndentation) {

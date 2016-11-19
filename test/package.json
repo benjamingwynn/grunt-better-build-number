@@ -1,9 +1,10 @@
 {
 	"name": "BuildNumberTest",
-	"build": "24",
+	"build": "25",
 	"whatever": {
 		"potato": true,
 		"thisis": "a test",
-		"nine": 9
+		"nine": 9,
+		"build": "8"
 	}
 }

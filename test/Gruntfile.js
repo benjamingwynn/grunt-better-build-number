@@ -10,7 +10,9 @@
 
 			buildnumber: {
 				main: {
-					options: {}
+					options: {
+						field: 'whatever.build'
+					}
 				}
 			}
 		});
