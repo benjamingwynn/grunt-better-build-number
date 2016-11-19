@@ -14,15 +14,15 @@
 	var findup = require('findup-sync');
 
 	module.exports = function (grunt) {
-		var files = this.files,
-			filepath,
-			meta,
-			buildNum,
-			options = this.options({ // Default options if none provided
-				field : 'build'
-			});
-
 		grunt.registerMultiTask('buildnumber', 'Grunt plugin for maintaining a build number in package.json', function () {
+			var files = this.files,
+				filepath,
+				meta,
+				buildNum,
+				options = this.options({ // Default options if none provided
+					field : 'build'
+				});
+
 			if (!files.length) {
 				files = [
 					{
