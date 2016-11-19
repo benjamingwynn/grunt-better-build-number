@@ -11,7 +11,8 @@
 			buildnumber: {
 				main: {
 					options: {
-						field: 'whatever.build'
+						field: 'whatever.build',
+						forceTabIndentation: true
 					}
 				}
 			}

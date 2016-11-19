@@ -47,8 +47,7 @@
 					lines,
 					spaceIndex,
 					space = '',
-					nestedField = new S(options.field).contains('.') || options.forceDotty,
-					buildKey;
+					nestedField = new S(options.field).contains('.') || options.forceDotty;
 
 				file.src.forEach(function (filename) {
 					filepath = findup(filename);

@@ -12,7 +12,7 @@
 
 	module.exports = function (grunt) {
 		// load all npm grunt tasks
-		require('load-grunt-tasks')(grunt);
+		grunt.loadNpmTasks('grunt-jslint');
 
 		// Project configuration.
 		grunt.initConfig({
