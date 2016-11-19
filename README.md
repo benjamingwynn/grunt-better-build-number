@@ -1,6 +1,6 @@
 # grunt-better-build-number
 
-> Grunt plugin for maintaining a build number in package.json (or another file)
+> A configurable Grunt plugin for maintaining a build number in package.json (or other files) - based on Camille Reynders' grunt-bulid-number, but doesn't modify tab indentation and can find nested fields.
 
 ## Getting Started
 This plugin requires Grunt.
