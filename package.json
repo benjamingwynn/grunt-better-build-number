@@ -1,49 +1,41 @@
 {
-	"name": "grunt-better-build-number",
-	"version": "1.0.0",
-	"description": "A configurable Grunt plugin for maintaining a build number in package.json (or other files) - based on Camille Reynders' grunt-bulid-number, but doesn't modify tab indentation and can find nested fields.",
-	"homepage": "https://github.com/benjamingwynn/grunt-better-build-number",
-	"repository": "https://github.com/benjamingwynn/grunt-better-build-number",
-
-	"author": {
-		"name": "Benjamin Gwynn",
-		"email": "xenxier@xenxier.com",
-		"url": "http://xenxier.com"
-	},
-
-	"contributors": [
-		{
-			"name": "Camille Reynders",
-			"email": "info@creynders.be",
-			"url": "http://www.creynders.be"
-		}
-	],
-
-	"keywords": [
-		"gruntplugin",
-		"build",
-		"version",
-		"grunt",
-		"number",
-		"better"
-	],
-
-	"main": "Gruntfile.js",
-
-	"engines": {
-		"node": ">=0.10.0"
-	},
-
-	"license": "MIT",
-
-	"devDependencies": {
-		"grunt": "~0.4.2",
-		"grunt-jslint": "^1.1.14"
-	},
-
-	"dependencies": {
-		"findup-sync": "^0.1.3",
-		"string": "^3.3.3",
-		"dotty": "0.0.2"
-	}
+  "name": "grunt-better-build-number",
+  "version": "1.0.1",
+  "description": "A configurable Grunt plugin for maintaining a build number in package.json (or other files) - based on Camille Reynders' grunt-bulid-number, but doesn't modify tab indentation and can find nested fields.",
+  "homepage": "https://github.com/benjamingwynn/grunt-better-build-number",
+  "repository": "https://github.com/benjamingwynn/grunt-better-build-number",
+  "author": {
+    "name": "Benjamin Gwynn",
+    "email": "xenxier@xenxier.com",
+    "url": "http://xenxier.com"
+  },
+  "contributors": [
+    {
+      "name": "Camille Reynders",
+      "email": "info@creynders.be",
+      "url": "http://www.creynders.be"
+    }
+  ],
+  "keywords": [
+    "gruntplugin",
+    "build",
+    "version",
+    "grunt",
+    "number",
+    "better"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-jslint": "^1.1.14"
+  },
+  "dependencies": {
+    "findup-sync": "^0.1.3",
+    "string": "^3.3.3",
+    "dotty": "0.0.2"
+  }
 }
