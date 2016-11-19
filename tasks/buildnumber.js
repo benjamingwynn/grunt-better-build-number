@@ -11,8 +11,7 @@
 	'use strict';
 	/*jslint node:true*/
 
-	var util = require('util'),
-		findup = require('findup-sync');
+	var findup = require('findup-sync');
 
 	module.exports = function (grunt) {
 		var files = this.files,
@@ -40,7 +39,7 @@
 						meta = grunt.file.readJSON(filepath);
 						buildNum = meta[options.field];
 
-						if (typeof buildNum !== "undefined") {
+						if (buildNum !== undefined) {
 							buildNum = parseInt(buildNum, 10) + 1;
 						} else {
 							buildNum = 1;
